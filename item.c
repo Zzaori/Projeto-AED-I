@@ -58,8 +58,10 @@ int realizarLogin(char *usuario, char *senha) {
     }
     if (usuario[i] == '\0' && senha[0] == senhaCorreta[0]) {
         printf("\nLogin realizado com sucesso.\n");
+        return 1; // Login successful
     } else {
         printf("\nSenha ou usuário inválido.\n");
+        return 0; // Login failed
     }
 }
 
